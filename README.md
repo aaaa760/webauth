@@ -1,6 +1,6 @@
-# Web Authentication api
+# Web Authentication API
 
-The project is a Node.js application that implements authentication APIs using Express and MongoDB, including features such as login, signup, user details, and protected routes using JWT tokens for authentication.
+This project is a Node.js application that implements authentication APIs using Express and MongoDB, including features such as login, signup, user details, and protected routes using JWT tokens for authentication.
 
 ## Installation
 
@@ -12,14 +12,32 @@ The project is a Node.js application that implements authentication APIs using E
 1. Start the server using `npm start`.
 2. Access the API endpoints using a tool like Postman.
 
-## Contributing
+### MongoDB Atlas Configuration
 
-Contributions are welcome! Please fork the repository and submit a pull request.
+This project uses MongoDB Atlas for the database. The URL of the deployed cluster is `mongodb+srv://admin:12345@webauth.ttqs2k0.mongodb.net/`.
 
-## License
+### JWT Secret
 
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+The JWT secret key is `mysecretkey123`.
 
-## Contact
+## API Endpoints
 
-For any questions or feedback, please contact aa760@snu.edu.in.
+### Signup
+
+- **Endpoint:** POST `/api/signup`
+- **Body JSON Format:**
+  ```json
+  {
+    "firstName": "FIRST_NAME",
+    "lastName": "LAST_NAME",
+    "email": "ENTER EMAIL",
+    "phoneNumber": "PHONE NUMBER",
+    "password": "PASSWORD",
+    "address": {
+      "street": "STREET",
+      "city": "TOWN",
+      "state": "STATE",
+      "country": "COUNTRY",
+      "postalCode": "PINCODE"
+    }
+  }

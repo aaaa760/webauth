@@ -6,6 +6,7 @@ dotenv.config();
 mongoose.connect(process.env.MONGODB_URI).then(() => console.log("Connected to Mongo DB Atlas")).catch((err) => console.error('Error connecting to MongoDB Atlas:', err));
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 const authRouter = require('./routes/auth');
 const authMiddleware = require('./middleware/authMiddleware');
 
@@ -18,3 +19,5 @@ app.use(authMiddleware);
 app.listen(3000, () => {
   console.log('Server is running on port 3000');
 });
+
+module.exports = app;
