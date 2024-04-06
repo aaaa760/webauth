@@ -22,8 +22,6 @@ The JWT secret key is `mysecretkey123`.
 
 ## API Endpoints
 
-## API Endpoints
-
 ### Signup
 
 - **Endpoint:** POST `/api/signup`
